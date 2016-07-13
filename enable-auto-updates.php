@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Enable Auto Updates
-Plugin URI: http://www.pulsion.co.uk/
+Plugin URI: https://github.com/sc-pulsion/wp_auto_update_mu_plugin/
 Description: Enable auto updates for all plugins and themes
 Version: 0.1
 Author: Stewart Campbell
