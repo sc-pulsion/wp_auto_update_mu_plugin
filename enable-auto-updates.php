@@ -6,7 +6,6 @@ Description: Enable auto updates for all plugins and themes
 Version: 0.2
 Author: Stewart Campbell
 Author URI: http://www.pulsion.co.uk/
-License: GPL
 Copyright: Pulsion Technology Ltd
 */
 
