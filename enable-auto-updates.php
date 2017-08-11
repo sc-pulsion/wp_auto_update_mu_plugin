@@ -2,8 +2,8 @@
 /*
 Plugin Name: Enable Auto Updates
 Plugin URI: https://github.com/sc-pulsion/wp_auto_update_mu_plugin/
-Description: Enable auto updates for all plugins and themes
-Version: 0.2
+Description: Enable auto updates for all plugins and themes. Clear WP Fastest Cache after any updates.
+Version: 0.3
 Author: Stewart Campbell
 Author URI: http://www.pulsion.co.uk/
 License: GPL
@@ -39,5 +39,15 @@ add_filter( 'auto_update_translation', '__return_true' );
  */
 add_filter( 'auto_core_update_send_email', '__return_true' );
 add_filter( 'automatic_updates_send_debug_email', '__return_true' );
+
+/*
+ * Clear WP Fastest Cache after any updates
+ */
+function action_upgrader_process_complete() { 
+	if(isset($GLOBALS['wp_fastest_cache']) && method_exists($GLOBALS['wp_fastest_cache'], 'deleteCache')){
+		$GLOBALS['wp_fastest_cache']->deleteCache(true);
+	}
+}; 
+add_action( 'upgrader_process_complete', 'action_upgrader_process_complete', 10, 2 ); 
 
 ?>
