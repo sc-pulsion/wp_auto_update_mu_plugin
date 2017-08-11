@@ -39,7 +39,6 @@ add_filter( 'auto_update_translation', '__return_true' );
 add_filter( 'auto_core_update_send_email', '__return_true' );
 add_filter( 'automatic_updates_send_debug_email', '__return_true' );
 
-<<<<<<< HEAD
 /*
  * Clear WP Fastest Cache after any updates
  */
@@ -48,9 +47,4 @@ function action_upgrader_process_complete() {
 		$GLOBALS['wp_fastest_cache']->deleteCache(true);
 	}
 }; 
-add_action( 'upgrader_process_complete', 'action_upgrader_process_complete', 10, 2 ); 
-
-?>
-=======
-?>
->>>>>>> origin/master
+add_action( 'upgrader_process_complete', 'action_upgrader_process_complete', 10, 2 );
